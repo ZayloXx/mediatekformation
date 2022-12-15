@@ -5,7 +5,7 @@
             <!-- emplacement de la vidéo -->
             {% if formation.videoid %}
                 <div style="width: 560px; height: 315px; float: none; clear: both; margin: 2px auto;">
-                  <embed
+                    <embed>
                     src="https://www.youtube.com/embed/{{ formation.videoid }}" 
                     wmode="transparent"
                     type="video/mp4"
@@ -13,7 +13,7 @@
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                     allowfullscreen
                     title="YouTube video player"
-                  >
+                  
                 </div>                                             
             {% endif %}
         </div>
