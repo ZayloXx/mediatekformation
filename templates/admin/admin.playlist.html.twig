@@ -68,9 +68,7 @@
                     </td>
                     <td>
                         <a href="{{ path('admin.playlist.edit',{id:playlist[k].id}) }} "  class='btn btn-secondary'>Editer</a>
-                        {% if playlist[k].formations|length >= 1%}
-                         <a href="{{ path('admin.playlist.suppr', {id:playlist[k].id}) }}" class="btn btn-danger" onclick="alert('Vous ne pouvez pas supprimer {{playlist[k].formations|length}} puisque une formation est relié à celle ci');return false;">Supprimer</a>
-                        {% else %}
+                        {% if playlist[k].formations|length == 0%}
                             <a href="{{ path('admin.playlist.suppr',{id:playlist[k].id}) }} " class="btn btn-danger" onclick="return confirm('Etes-vous sûr de vouloir supprimer cette playlist : {{ playlist[k].name }} ?')">Supprimer</a>
                         {% endif %}
                     </td>
